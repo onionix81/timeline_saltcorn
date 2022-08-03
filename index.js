@@ -453,7 +453,7 @@ module.exports = {
     sc_plugin_api_version: 1,
     headers,
     viewtemplates: [{
-        name: "Gantt",
+        name: "timeline",
         display_state_form: false,
         get_state_fields,
         configuration_workflow,
