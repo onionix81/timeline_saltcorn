@@ -133,36 +133,7 @@ const configuration_workflow = () =>
                                     .join(),
                             },
                         },
-                        /*{
-                            name: "milestone_field",
-                            label: "Milestone field",
-                            type: "String",
-                            sublabel: "(Under construction) The table can supply a fields of type 'Bool' to mark task as milestone.",
-                            required: false,
-                            attributes: {
-                                options: [
-                                    ...fields
-                                    .filter((f) => f.type.name === "Bool")
-                                    .map((f) => f.name),
-                                    "Always",
-                                ].join(),
-                            },
-                        },
-                        {
-                            name: "progress_field",
-                            label: "Progress field",
-                            type: "String",
-                            sublabel: "A fields of type 'Integer' or 'Float' to denote progress.",
-                            required: false,
-                            attributes: {
-                                options: fields
-                                    .filter(
-                                        (f) => f.type.name === "Integer" || f.type.name === "Float"
-                                    )
-                                    .map((f) => f.name)
-                                    .join(),
-                            },
-						},*/	
+                    	
 					    {
                             name: "holidays_data",
                             type: "String",
@@ -442,10 +413,10 @@ const delete_values = async (
 
 
 const headers = [{
-        script: "https://xinonix.ru/files/serve/12",
+        script: "/plugins/public/timeline_saltcorn/script.js",
     },
     {
-        css: "https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css",
+        css: "/plugins/public/timeline_saltcorn/style.js",
     },
 ];
 
@@ -453,7 +424,7 @@ module.exports = {
     sc_plugin_api_version: 1,
     headers,
     viewtemplates: [{
-        name: "timeline",
+        name: "Timeline",
         display_state_form: false,
         get_state_fields,
         configuration_workflow,
