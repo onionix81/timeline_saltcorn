@@ -1,6 +1,6 @@
 {
   "name": "timeline_saltcorn",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Time-line for Saltcorn",
   "main": "index.js",
   "homepage":"https://github.com/onionix81/timeline_saltcorn/",

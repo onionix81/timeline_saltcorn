@@ -227,7 +227,6 @@ const run = async(
     return div(
         div(    {
       id : "visualization",
-      //class: "gantt-target",
     }
 	
 ),
@@ -334,7 +333,7 @@ const run = async(
  view_post('${viewname}', 'set_new_values', item);
  },
 onRemove: function (item, callback) {
-    result = confirm('Действительно удалить?');
+    result = confirm('Delete it?');
     if (result == true) {
       view_post('${viewname}', 'delete_values', item);
 	  callback(item);
@@ -413,10 +412,13 @@ const delete_values = async (
 
 
 const headers = [{
-        script: "/plugins/public/timeline_saltcorn/script.js",
+        //script: "/plugins/public/timeline_saltcorn/vis-timeline-graph2d.min.js",
+		script :"https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js",
+		
     },
     {
-        css: "/plugins/public/timeline_saltcorn/style.js",
+        //css: "/plugins/public/timeline_saltcorn/vis-timeline-graph2d.min.css",
+		css: "https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css",
     },
 ];
 
